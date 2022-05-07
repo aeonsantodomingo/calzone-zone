@@ -1,0 +1,518 @@
+.btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 20px;
+  background: #D95204;
+  color: #F29F05;
+  border-radius: 3rem;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  display: block; }
+  .btn:hover {
+    background-color: #323E40; }
+
+.line {
+  height: 3px;
+  background-color: #F29F05;
+  width: 10rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Raleway';
+  line-height: 1.6;
+  min-width: 100%;
+  background-color: #F29F05; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F29F05;
+  flex-wrap: wrap; }
+  #main-nav h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-left: 1rem;
+    color: #323E40; }
+  #main-nav ul {
+    display: flex;
+    flex-direction: row;
+    position: relative; }
+    #main-nav ul li {
+      margin: 20px;
+      font-weight: 600; }
+    #main-nav ul a {
+      color: #323E40;
+      font-size: 1.2rem;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s; }
+      #main-nav ul a:hover {
+        border-color: #323E40; }
+      #main-nav ul a.current {
+        border-color: #D95204; }
+  #main-nav .header-social {
+    display: flex; }
+    #main-nav .header-social div {
+      margin: 0.5rem; }
+    #main-nav .header-social i {
+      color: #323E40;
+      padding: 1rem;
+      background-color: #D95204;
+      border-radius: 50%; }
+      #main-nav .header-social i:hover {
+        background: #323E40;
+        color: #F29F05; }
+  #main-nav .header-locations {
+    background: #D95204;
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center; }
+    #main-nav .header-locations a {
+      color: #323E40;
+      font-weight: bold;
+      font-size: 1.3rem; }
+      #main-nav .header-locations a:hover {
+        color: #F29F05; }
+    #main-nav .header-locations i {
+      color: #323E40; }
+  #main-nav .hamburger {
+    display: none; }
+
+#home-a {
+  background-image: url(/images/calzone_1.jpeg);
+  padding: 20vh;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #home-a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0; }
+  #home-a > * {
+    z-index: 10;
+    position: relative;
+    color: #F29F05; }
+  #home-a h1 {
+    font-size: 5rem; }
+  #home-a button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px;
+    background: #D95204;
+    border-radius: 3rem;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    display: block;
+    color: #F29F05; }
+    #home-a button:hover {
+      background-color: #323E40;
+      color: #F29F05; }
+
+#home-b .container {
+  background-color: #F29F05;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  #home-b .container-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #323E40;
+    font-size: 2rem; }
+  #home-b .container button {
+    margin-top: 20px; }
+  #home-b .container img {
+    width: 720px;
+    height: 500px; }
+
+#home-c .container {
+  background-color: #F29F05;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  #home-c .container-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #323E40;
+    font-size: 2rem; }
+
+#home-c button {
+  margin-top: 20px; }
+
+#home-c img {
+  width: 705px;
+  height: 500px; }
+
+#home-d {
+  background-image: url("/images/locations_4.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #home-d::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0; }
+  #home-d > * {
+    z-index: 10;
+    position: relative;
+    color: #F29F05; }
+  #home-d h1 {
+    font-size: 3rem; }
+
+.locations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden; }
+  .locations-list h1 {
+    color: #323E40;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden; }
+
+button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem; }
+
+#menu-banner .container {
+  background-image: url("/images/menu_1.jpg");
+  padding: 20vh;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #menu-banner .container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0; }
+  #menu-banner .container h1 {
+    z-index: 10;
+    position: relative;
+    color: #F29F05;
+    font-size: 5rem; }
+  #menu-banner .container button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px;
+    background: #D95204;
+    border-radius: 3rem;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px; }
+    #menu-banner .container button:hover {
+      background-color: #323E40; }
+
+#menu h2 {
+  color: #323E40;
+  display: inline-flex;
+  background-color: #D95204;
+  padding: 1rem;
+  width: 400px;
+  justify-content: center;
+  margin: 2rem; }
+
+#menu .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  grid-gap: 2rem; }
+  #menu .container h3, #menu .container p {
+    display: flex;
+    color: #323E40;
+    font-size: 1.5rem; }
+
+#menu img {
+  width: 100%;
+  height: 400px; }
+
+#careers-banner .container {
+  background-image: url("/images/careers_1.jpg");
+  padding: 20vh;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #careers-banner .container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0; }
+  #careers-banner .container h1 {
+    z-index: 10;
+    position: relative;
+    color: #F29F05;
+    font-size: 5rem; }
+  #careers-banner .container button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px;
+    background: #D95204;
+    border-radius: 3rem;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px; }
+    #careers-banner .container button:hover {
+      background-color: #323E40; }
+
+#jobs h1 {
+  color: #323E40;
+  display: inline-flex;
+  background-color: #D95204;
+  padding: 1rem;
+  width: 400px;
+  justify-content: center;
+  margin: 2rem; }
+
+#jobs .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  grid-gap: 1rem; }
+  #jobs .container h2, #jobs .container p {
+    display: flex;
+    color: #323E40;
+    font-size: 1.5rem; }
+  #jobs .container button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem;
+    background: #D95204;
+    color: #F29F05;
+    border-radius: 3rem;
+    border: none;
+    width: 150px;
+    margin-top: 0.5rem; }
+    #jobs .container button:hover {
+      background-color: #323E40; }
+
+#about .container {
+  background-image: url("/images/about.jpg");
+  padding: 20vh;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #about .container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0; }
+  #about .container p {
+    z-index: 10;
+    position: relative;
+    color: #F29F05;
+    font-size: 2rem; }
+  #about .container h1 {
+    z-index: 10;
+    position: relative;
+    color: #F29F05;
+    font-size: 3rem; }
+
+#locations-banner .container {
+  background-image: url("/images/locations_2.jpg");
+  padding: 20vh;
+  background-size: cover;
+  width: 100%;
+  height: 380px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #locations-banner .container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0; }
+  #locations-banner .container h1 {
+    z-index: 10;
+    position: relative;
+    color: #F29F05;
+    font-size: 5rem; }
+  #locations-banner .container button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px;
+    background: #D95204;
+    border-radius: 3rem;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px; }
+    #locations-banner .container button:hover {
+      background-color: #323E40; }
+
+#locations-2 {
+  margin: 2rem 0; }
+  #locations-2 h2 {
+    color: #323E40;
+    display: inline-flex;
+    background-color: #D95204;
+    padding: 1rem;
+    width: 400px;
+    justify-content: center;
+    margin: 2rem; }
+  #locations-2 .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    grid-gap: 2rem; }
+    #locations-2 .container h3, #locations-2 .container p {
+      display: flex;
+      color: #323E40;
+      font-size: 1.5rem; }
+
+#footer {
+  background-color: #323E40; }
+  #footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4rem;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column; }
+    #footer .footer-container .footer-rights {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      #footer .footer-container .footer-rights p {
+        color: #F29F05;
+        font-weight: 600; }
+    #footer .footer-container h1 {
+      color: #F29F05;
+      font-size: 1.5rem; }
+    #footer .footer-container a {
+      color: #F29F05; }
+      #footer .footer-container a:hover {
+        color: #D95204; }
+    #footer .footer-container h2 {
+      color: #F29F05;
+      font-size: 1.2rem; }
+    #footer .footer-container p {
+      color: #F29F05; }
+    #footer .footer-container form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem; }
+      #footer .footer-container form input {
+        margin-bottom: 0.8rem; }
+        #footer .footer-container form input[type=email] {
+          background-color: rgba(0, 0, 0, 0.2);
+          border: none;
+          color: #F29F05;
+          padding: 0.8rem; }
+          #footer .footer-container form input[type=email]::placeholder {
+            color: #F29F05; }
+          #footer .footer-container form input[type=email]:focus {
+            outline: none; }
+        #footer .footer-container form input[type=submit] {
+          background-color: #F29F05;
+          border: none;
+          color: #323E40;
+          font-weight: 600;
+          padding: 0.8rem; }
+          #footer .footer-container form input[type=submit]:hover {
+            color: #F29F05;
+            background-color: #D95204; }
+    #footer .footer-container .contact-info h3 {
+      color: #F29F05;
+      font-weight: 400; }
+    #footer .footer-container .header-social {
+      display: flex; }
+      #footer .footer-container .header-social div {
+        margin: 0.5rem; }
+      #footer .footer-container .header-social i {
+        color: #323E40;
+        padding: 1rem;
+        background-color: #F29F05;
+        border-radius: 50%; }
+        #footer .footer-container .header-social i:hover {
+          color: #F29F05;
+          background-color: #D95204; }

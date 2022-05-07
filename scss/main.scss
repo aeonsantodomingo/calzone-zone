@@ -1,0 +1,732 @@
+// imports
+
+@import 'config';
+@import 'utility';
+
+// general styles
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway';
+  line-height: 1.6;
+  min-width: 100%;
+  background-color: $light-color;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// Header & Nav
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $light-color;
+  flex-wrap: wrap;
+  
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-left: 1rem;
+    color: $dark-color;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+    li {
+      margin: 20px;
+      font-weight: 600;
+   
+    }
+
+    a {
+      color: $dark-color;
+      font-size: 1.2rem;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s;
+
+      &:hover {
+        border-color: $dark-color;
+      }
+
+      &.current {
+        border-color: $medium-color;
+      }
+    }
+  }
+
+  .header-social {
+    display: flex;
+    
+    
+    div {
+      margin: 0.5rem;  
+    }
+
+    i {
+      color: $dark-color;
+      padding: 1rem;
+      background-color: $medium-color;
+      border-radius: 50%;
+
+      &:hover {
+        background: $dark-color;
+        color: $light-color;
+      }
+    }
+  }
+
+  .header-locations {
+    background: $medium-color;
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+
+    a {
+      color: $dark-color;
+      font-weight: bold;
+      font-size: 1.3rem;
+
+      &:hover {
+        color: $light-color;
+      }
+    }
+
+    i {
+      color: $dark-color;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+
+}
+
+// Home A: Hero
+
+#home-a {
+  background-image: url(/images/calzone_1.jpeg);
+  padding: 20vh;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0;
+  }
+
+  & > * {
+    z-index: 10;
+    position: relative;
+    color: $light-color;
+  }
+
+  h1 {
+    font-size: 5rem;
+
+  }
+
+  button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px;
+    background: $medium-color;
+    border-radius: 3rem;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    display: block;
+    color: $light-color;
+
+    &:hover {
+      background-color: $dark-color;
+      color: $light-color;
+    }
+  }
+}
+
+// Home B: Short About
+
+#home-b {
+  .container {
+    background-color: $light-color;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    &-info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: $dark-color;
+      font-size: 2rem;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+
+    img {
+      width: 720px;
+      height: 500px;
+    }
+  }
+}
+
+// Home C: Vegitarian Calzone
+
+#home-c {
+
+  .container {
+    background-color: $light-color;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: $dark-color;
+    font-size: 2rem;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+
+  img {
+    width: 705px;
+    height: 500px;
+  }
+}
+
+// Home D: Locations
+
+#home-d {
+  background-image: url('/images/locations_4.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0;
+  }
+
+  & > * {
+    z-index: 10;
+    position: relative;
+    color: $light-color;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+}
+
+.locations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+
+  h1 {
+    color: $dark-color;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  
+}
+
+button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+
+// Section A: Menu Banner
+
+#menu-banner {
+  .container {
+    background-image: url('/images/menu_1.jpg');
+    padding: 20vh;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .7;
+      z-index: 0;
+    }
+
+    h1 {
+      z-index: 10;
+      position: relative;
+      color: $light-color;
+      font-size: 5rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 20px;
+      background: $medium-color;
+      border-radius: 3rem;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+
+      &:hover {
+        background-color: $dark-color;
+      }
+    }
+  }
+}
+
+// Section B: Menu
+
+#menu {
+  h2 {
+    color: $dark-color;
+    display: inline-flex;
+    background-color: $medium-color;
+    padding: 1rem;
+    width: 400px;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    grid-gap: 2rem;
+    
+    h3, p {
+      display: flex;
+      color: $dark-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+// Section A: Careers
+
+#careers-banner {
+  .container {
+    background-image: url('/images/careers_1.jpg');
+    padding: 20vh;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .7;
+      z-index: 0;
+    }
+
+    h1 {
+      z-index: 10;
+      position: relative;
+      color: $light-color;
+      font-size: 5rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 20px;
+      background: $medium-color;
+      border-radius: 3rem;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+
+      &:hover {
+        background-color: $dark-color;
+      }
+    }
+  }
+}
+
+#jobs {
+  h1 {
+    color: $dark-color;
+    display: inline-flex;
+    background-color: $medium-color;
+    padding: 1rem;
+    width: 400px;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    grid-gap: 1rem;
+    
+    h2, p {
+      display: flex;
+      color: $dark-color;
+      font-size: 1.5rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 0.8rem;
+      background: $medium-color;
+      color: $light-color;
+      border-radius: 3rem;
+      border: none;
+      width: 150px;
+      margin-top: 0.5rem;
+
+      &:hover {
+        background-color: $dark-color
+      
+      }
+    }  
+  }  
+}
+
+// Section A: About
+
+#about {
+  .container {
+    background-image: url('/images/about.jpg');
+    padding: 20vh;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .7;
+      z-index: 0;
+    }
+
+    p {
+      z-index: 10;
+      position: relative;
+      color: $light-color;
+      font-size: 2rem;
+    }
+
+    h1 {
+      z-index: 10;
+      position: relative;
+      color: $light-color;
+      font-size: 3rem;
+    }
+  }
+}
+
+// Section A: Locations
+
+#locations-banner {
+  .container {
+    background-image: url('/images/locations_2.jpg');
+    padding: 20vh;
+    background-size: cover;
+    width: 100%;
+    height: 380px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .7;
+      z-index: 0;
+    }
+
+    h1 {
+      z-index: 10;
+      position: relative;
+      color: $light-color;
+      font-size: 5rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 20px;
+      background: $medium-color;
+      border-radius: 3rem;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+
+      &:hover {
+        background-color: $dark-color;
+      }
+    }
+  }
+}
+
+#locations-2 {
+
+  margin: 2rem 0;
+
+  h2 {
+    color: $dark-color;
+    display: inline-flex;
+    background-color: $medium-color;
+    padding: 1rem;
+    width: 400px;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    grid-gap: 2rem;
+    
+    h3, p {
+      display: flex;
+      color: $dark-color;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+
+// footer
+
+#footer {
+  background-color: $dark-color;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4rem;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column;
+    
+    .footer-rights {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      p {
+        color: $light-color;
+        font-weight: 600;
+      }
+    }
+    
+    h1 {
+      color: $light-color;
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: $light-color;
+
+      &:hover {
+        color: $medium-color;
+      }
+    }
+
+    h2 {
+      color: $light-color;
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: $light-color;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+
+      input { 
+        margin-bottom: 0.8rem;
+
+        &[type=email] {
+          background-color: rgba(0, 0, 0, 0.2);
+          border: none;
+          color: $light-color;
+          padding: 0.8rem;
+          
+          &::placeholder {
+            color: $light-color;
+          }
+
+          &:focus {
+            outline: none;
+          }
+          
+        }
+
+        &[type=submit] {
+          background-color: $light-color;
+          border: none;
+          color: $dark-color;
+          font-weight: 600;
+          padding: 0.8rem;
+
+          &:hover {
+            color: $light-color;
+            background-color: $medium-color;
+          }
+        }
+      }     
+    }
+
+    .contact-info {
+      h3 {
+        color: $light-color;
+        font-weight: 400;
+      }
+    }
+
+    .header-social {
+      display: flex;
+      
+      div {
+        margin: 0.5rem;  
+      }
+  
+      i {
+        color: $dark-color;
+        padding: 1rem;
+        background-color: $light-color;
+        border-radius: 50%;
+
+        &:hover {
+          color: $light-color;
+          background-color: $medium-color;
+        }
+      }
+    }
+  }
+}
+

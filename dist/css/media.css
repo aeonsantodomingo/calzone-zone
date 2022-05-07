@@ -1,0 +1,152 @@
+@media (max-width: 800px) {
+  #main-nav {
+    justify-content: space-between;
+    line-height: 3rem;
+    margin: 1rem; }
+    #main-nav h1 {
+      font-size: 2.5rem; }
+    #main-nav .nav-ul {
+      display: none;
+      width: 100%; }
+      #main-nav .nav-ul a {
+        font-size: 2rem; }
+    #main-nav .nav-ul.show {
+      display: flex;
+      justify-content: center;
+      background-color: #D95204;
+      flex-direction: column;
+      margin: 2rem; }
+    #main-nav .hamburger {
+      background-color: transparent;
+      border: 0;
+      color: #323E40;
+      font-size: 3rem;
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: -12px;
+      right: 0;
+      padding: 2rem;
+      z-index: 10; }
+    #main-nav .hamburger:focus {
+      outline: none; }
+    #main-nav .header-locations {
+      display: none; }
+  #home-a {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #home-a h1 {
+      font-size: 3rem; }
+    #home-a button {
+      font-size: 0.8rem;
+      padding: 1rem;
+      width: 150px;
+      color: #F29F05; }
+  #home-b .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    #home-b .container-info {
+      margin-top: 1rem;
+      font-size: 1rem;
+      padding: 1rem; }
+    #home-b .container img {
+      width: 100%;
+      height: 300px; }
+    #home-b .container button {
+      font-size: 0.8rem;
+      padding: 1rem;
+      width: 150px;
+      color: #F29F05; }
+  #home-c .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse; }
+    #home-c .container-info {
+      margin-top: 1rem;
+      font-size: 1rem;
+      padding: 1rem; }
+    #home-c .container img {
+      width: 100%;
+      height: 300px; }
+    #home-c .container button {
+      font-size: 0.8rem;
+      padding: 1rem;
+      width: 150px;
+      color: #F29F05; }
+  #home-d {
+    height: 300px; }
+  .locations-list {
+    display: flex;
+    flex-direction: column; }
+    .locations-list h1 {
+      font-size: 2rem; }
+  #locations-banner .container {
+    height: 200px;
+    width: 100%; }
+    #locations-banner .container h1 {
+      display: flex;
+      font-size: 2rem;
+      justify-content: center; }
+  #locations-2 .container {
+    display: flex;
+    flex-direction: column; }
+    #locations-2 .container h3 {
+      font-size: 2rem; }
+    #locations-2 .container p {
+      font-size: 1.2rem; }
+  #about .container {
+    height: 500px;
+    padding: 0; }
+    #about .container h1 {
+      display: none; }
+    #about .container p {
+      font-size: 1rem;
+      width: 300px;
+      margin: 0 auto; }
+  #footer .footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem;
+    grid-gap: 2rem; }
+    #footer .footer-container .footer-rights .line {
+      height: 2px;
+      margin: 1rem 0; }
+    #footer .footer-container form[type=email] {
+      padding: 1.2rem; }
+    #footer .footer-container form[type=submit] {
+      padding: 1.2rem; }
+  #menu-banner .container {
+    width: 100%;
+    height: 200px; }
+    #menu-banner .container h1 {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem; }
+  #menu {
+    padding: 20px; }
+    #menu h2 {
+      display: flex;
+      width: 200px; }
+    #menu .container {
+      display: flex;
+      flex-direction: column; }
+  #careers-banner .container {
+    height: 200px; }
+    #careers-banner .container h1 {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem; }
+  #jobs h1 {
+    display: flex;
+    width: 250px; }
+  #jobs .container {
+    display: flex;
+    flex-direction: column; }
+    #jobs .container h2 {
+      font-size: 1.3rem; }
+    #jobs .container p {
+      font-size: 1.2rem; } }
