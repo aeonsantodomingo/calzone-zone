@@ -1,6 +1,7 @@
 @import 'config';
 
 // Large Phones
+// Max Width 800px
 
 @media(max-width: 800px) {
 
@@ -293,4 +294,27 @@
       }
     }
   }
+}
+
+// Large Monitors
+// Min Width 1920
+
+@media(min-width: 1920px) {
+
+  #home-b {
+    .container {
+      img {
+        display: flex;
+        width: 950px;
+      }
+    }
+  }
+  #home-c {
+    .container {
+      img {
+        width: 953px;
+      }
+    }
+  }
+
 }

@@ -150,3 +150,10 @@
       font-size: 1.3rem; }
     #jobs .container p {
       font-size: 1.2rem; } }
+
+@media (min-width: 1920px) {
+  #home-b .container img {
+    display: flex;
+    width: 950px; }
+  #home-c .container img {
+    width: 953px; } }
